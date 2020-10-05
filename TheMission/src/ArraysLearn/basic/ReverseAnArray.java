@@ -34,4 +34,10 @@ public class ReverseAnArray {
         a[i] = a[j];
         a[j]= temp;
     }
+
+    public static void reverseArray1(int a[]) {
+        for(int i=0;i<a.length/2;i++) {
+            swap(a,i,a.length-i-1);
+        }
+    }
 }

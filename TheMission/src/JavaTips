@@ -1,0 +1,4 @@
+>> Convert Object[] Array to Integer Array[]
+           Arrays.copyOf(Object[],length,Integer[].class);
+
+>>

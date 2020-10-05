@@ -10,18 +10,19 @@ public class PreviousAndNextMultiply {
     public static void main(String[] args) {
         int a[]= {2,4,5,7,8};
         ArrayHelper.printArray(a);
-         multiply(a);
-         ArrayHelper.printArray(a);
+         multiply(a); //8 10 28 40 56
+        ArrayHelper.printArray(a);
     }
 
     private static void multiply(int a[]) {
         int prev = a[0];
-        a[0] = a[0] * a[1];
-        for(int i=1;i<a.length-1;i++) {
+
+        for(int i=0;i<a.length-1;i++) {
             int temp = a[i];
             a[i] = prev * a[i+1];
             prev = temp;
         }
         a[a.length-1] = prev * a[a.length-1];
     }
+
 }

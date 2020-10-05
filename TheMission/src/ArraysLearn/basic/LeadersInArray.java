@@ -9,7 +9,7 @@ import java.util.Stack;
 
 public class LeadersInArray {
     public static void main(String[] args) {
-        int a[] = {5, 3, 20, 15, 8, 25};
+        int a[] = {5, 3, 20, 15, 8, 1};
 
         Integer[] leaders = findLeaders(a);
 
@@ -43,5 +43,27 @@ public class LeadersInArray {
         }
 
         return answer.toArray(new Integer[answer.size()]);
+    }
+
+    private static Integer[] findLeaders1(int a[]) {
+
+        if(a.length  < 1)  {
+            throw new AssertionError("Array cant be empty");
+        }
+        Stack<Integer> s = new Stack<>();
+        s.add(a[a.length-1]);
+       // int a[] = {5, 3, 20, 15, 8, 1};
+        for(int i=a.length-2;i>=0;i--) {
+            if(a[i] > s.peek()) {
+                s.add(a[i]);
+            }
+        }
+
+        Integer[] ans = Arrays.copyOf(s.toArray(),s.size(),Integer[].class);
+        return ans;
+
+
+
+
     }
 }
