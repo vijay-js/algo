@@ -1,0 +1,49 @@
+Tips
+
+Generally speaking, if you need to generate numbers from min to max (including both), you write
+    Random rand = new Random();
+    rand.nextInt(max - min + 1) + min
+
+
+Rotate an Array
+
+>> Works with Reversing an Array
+>> Or find the new coordinates of the elements after shifting d by number
+
+Majority Element
+
+>> Bayer's Moores Algo (Check LeetCode answer for 3 elements too)
+>> Start with first element as majority element and then increment or decrement count as we traverse the array . See the final element.
+   Another pass required to see element occured more than n/2 times;
+>> Interesting aspect in bayers is split the
+
+
+Trapping Rain Water
+
+>> See the variation with Stacks??
+
+
+Container with Most Water
+
+-- Two pointer on left and right and move based on the least height
+
+
+Sliding Window
+
+Always code with i as the end of the window
+
+>> Sub Array WIth
+
+
+
+
+
+
+Questions and Patterns
+
+
+>> Leaders in an array  -- Traverse from end and Store max from end
+>> Trapping Rainwater -- Store max from start and max from end - and compute volume of water than can be stored.
+>> Stock Buy and Sell --
+
+

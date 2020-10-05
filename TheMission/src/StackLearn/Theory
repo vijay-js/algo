@@ -1,0 +1,15 @@
+>> LIFO
+
+>> Stack<Character> stack = new Stack<>();
+
+Questions
+
+
+>> Balanced Parentheses
+>> Longest Valid Parentheses --> Store the indices into the stack instead of paranthesis
+>> Next greater element in the array
+>> Infix, Postfix, Prefix
+>> Calculator
+>> Celebrity
+>> Max Area Historgram
+>> Next Greater Element

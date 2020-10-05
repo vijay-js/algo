@@ -1,0 +1,66 @@
+>> Sorted Arrays and how to search in sorted array - Recursive and Iterative Implementation
+
+>> IMPORTANT OBSERVATION::
+        -- Note that in binary search algo -=> IF key is not present - the low index will always be pointing at the correct position of insertuin after coming out of the loop ::: SO LOW will give insert position
+
+>> Finding first or last occurence in sorted array
+
+>> Count #of occurences in soredt array (Above method)
+
+
+
+>> ROTATED SORTED ARRAYS
+        > Find the # of times an array is rotated -> Find the index of min element in rotated sorted array
+                > Here the pivot element would be lesser than both the next and prev elements
+        > Find element in circular sorted  array ->  One of the halves will be sorted. --> DOESNT WORK ON DUPLICATES
+
+>> Given an infinite sized sorted array and an element x -> Find if x is present in array or not.
+     -> Start at 0 -> double the search space everytime till arr[i] < x . Then binary between i/2,i
+
+
+>>> MEDIAN OF TWO SORTED ARRAYS :::
+    - Find parition in the smallest array (Tushar Roy Video)
+    - so that elements in left half of partitoin are less then right half of partiotion
+    - partitionX + partitionY = (A.length + B.length + 1)/2
+
+
+SEARCH IN A NEARLY SORTED ARRAY ::
+
+>> Defn -> element is at i , i-1 or i+1;
+-- So compare with mid, mid-1, mid +1 and prcoedd
+
+
+Floor of an element in a Sorted Array --> Easy same funda
+
+
+>>MINIMUM DIFFERENCE ELEMENT IN SORTED ARRAY
+    -- Find the insert position of the element - then find the min diff by comparing with the
+
+
+PEAK ELEMENT
+
+>> Find Peak Element on UNSORTED ARRAY
+
+   --> Very keen observation is that the if mid element is not peak -> Then if left half is greater -> Then peak lies in left half or if right is greater then peak lies in the right half
+   --> There can be multiple peaks- we jsut find 1
+
+
+TWO POINTERS
+
+
+>> Given a sorted array -> check whether 2 numbers sum up to a given number. O(1) space and O(n) time
+        - One pointer at start and one pointer at end
+
+>> Triplet Sum (Given a sorted or UNSORTED Array -> Find triplet sum :: as good as  fix one element and search for rest 2 using above apprioach )
+
+>> Pythogorean Triplet
+
+
+JAVA
+
+>> Collections.binarySearch
+// Returns index of key in sorted list sorted in
+// order defined by Comparator c.
+public static int binarySearch(List slist, T key, Comparator c)
+
+>> Arrays.binarySearch(arr[], key) // returns key if found  else -(insertionPoint -1)

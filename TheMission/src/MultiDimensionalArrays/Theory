@@ -1,0 +1,47 @@
+>>> Always Make this mental model
+    element a[1][4] implies -> Go to the 2nd row which is a[1] and pick the 5th element in second row . which is a[1][4]
+    a[i] => Always gives the entire row
+
+>> Running a loop to fetch elements in rows first would be better as its stored in Row Major Order in the memory. So because of cache friendliness -
+will fetch beside elements.
+
+
+
+
+TRANSPOSE OF A MATRIX
+a[i][j] = a[j][i]
+
+-- For a square matrix - It is just switching rows with columns and columns with rows.
+
+>>> Important to note that Transpose of a matrix can be done in place with just swapping opposite elements in diagonals.
+
+
+
+
+ROTATION OF MATRIX (USE TRANSPOSE)
+
+>> Rotation of a matrix can be done using a
+    >> Transpose of a matrix and then
+    >> reversing either row or column
+
+
+SEARCH IN SORTED MATRIX ::
+
+2 variations ::
+   > Only row wise sorted and column wise sorted --> Step wise -> Start from last column of first row and either decrement column or increament row
+   > FULLY SORTED
+        > Treat as array and binary search. row => mid / n ; col = mid%n
+
+
+
+DIAGONAL MATRIX PRINT ::
+>> See the start elements of each diagonal -> first row and last column (and print the elements based on the increment)
+
+
+SPIRAL ORDER OF MATRIX ::
+
+>> Keep 4 points for tracing the boundaries => Print Top Row, Last Column, Bottom Row, First Column and keep reduscing the boundaries after printing;
+
+
+
+

@@ -1,0 +1,8 @@
+Recursion ::
+
+
+Tail Recursion - easier to optimize --> because the compiler use tail call elimination
+    >> No need to the control back to the parent so no state required to maintain as its the last statement in the fucntion call
+    >> So instead of recursion - carry a result as well.
+
+
