@@ -1,4 +1,4 @@
-package RecursionLearn.basics;
+package RecursionLearn.stack;
 
 import java.util.Stack;
 

@@ -16,8 +16,10 @@ public class InsertInMiddle {
         //10 >1 > 8  > 3 > 2
         StackPrinter.print(s);
         int middleElementIndex = s.size()/2 + 1;
-        deleteMiddleElement(s,middleElementIndex, 1);
+//        deleteMiddleElement(s,middleElementIndex, 1);
 //        insertIntoMiddle(s,s.size(),k);
+
+        delMiddle(s,s.size(),1);
         StackPrinter.print(s);
     }
 
@@ -51,6 +53,17 @@ public class InsertInMiddle {
 
     }
 
-
+    private static void delMiddle(Stack<Integer> s, int size, int i) {
+        if(size <=1) {
+            return;
+        }
+        if(i == size/2 + 1) {
+            s.pop();
+            return;
+        }
+        int el = s.pop();
+        delMiddle(s,size,i+1);
+        s.push(el);
+    }
 
 }
