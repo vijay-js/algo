@@ -8,7 +8,7 @@ public class Factorial {
 
         Log.write(fact(4));
         Log.write(factTailRecurisve(4,1));
-
+        Log.write(factIter(1));
 
     }
 
@@ -27,6 +27,21 @@ public class Factorial {
         }
 
         return factTailRecurisve(n-1,result*n);
+    }
+
+
+    public static int factIter(int n ) {
+        if (n < 0) throw new AssertionError("Need positive numbers");
+        if(n == 0) return 1;
+
+        int ans = 1;
+
+        for(int i=1;i<=n;i++) {
+            ans = ans * i;
+        }
+
+        return ans;
+
     }
 }
 
