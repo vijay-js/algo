@@ -160,8 +160,7 @@ public class BSTImpl {
         if(head == null) return false;
         else if(head.getVal() == val) return true;
         else if(val <= head.getVal()) return Search(head.getLeft(),val);
-        else if(val > head.getVal()) return Search(head.getRight(),val);
-        return false;
+        else  return Search(head.getRight(),val);
     }
 
     public void Print(Node head) {
