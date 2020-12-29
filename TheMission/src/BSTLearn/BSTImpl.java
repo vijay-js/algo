@@ -7,7 +7,7 @@ public class BSTImpl {
     private void Insert(Node head, int val) {
 
         if(head == null) {
-            head = new Node(val);
+            this.head = new Node(val);
             return;
         }
 
@@ -49,10 +49,87 @@ public class BSTImpl {
         return head;
     }
 
+
+    private Node InsertRecursive(Node head, int val) {
+        if(head == null) {
+            Node node = new Node(val);
+            return node;
+        }
+        if(val > head.val) {
+            head.right = InsertRecursive(head.right,val);
+        }
+        else {
+            head.left = InsertRecursive(head.left,val);
+        }
+        return head;
+    }
+
+    private Node InsertIterV1(Node head, int val) {
+
+        Node temp = head;
+
+        if(temp == null) {
+            return new Node(val);
+        }
+
+        while(true) {
+            if(val > temp.val) {
+                if(temp.right == null) {
+                    temp.right = new Node(val);
+                    break;
+                }
+                else {
+                    temp = temp.right;
+                }
+            }
+            else {
+                if(temp.left == null) {
+                    temp.left = new Node(val);
+                    break;
+                }
+                else {
+                    temp = temp.left;
+                }
+            }
+        }
+
+        return head;
+
+
+    }
+
+    //Better Version - Store the node at which it needs to be inserted
+    private Node InsertIterV2(Node head, int val) {
+        if(head == null) {
+            return new Node(val);
+        }
+
+        Node previous = null;
+        Node current = head;
+
+        while(current != null) {
+            previous = current;
+            if(val > current.val) {
+                current = current.right;
+            }
+            else {
+                current = current.left;
+            }
+        }
+
+        if(val > previous.val) {
+            previous.right = new Node(val);
+        }
+        else {
+            previous.left = new Node(val);
+        }
+
+        return head;
+    }
     private void InsertIter(Node head, int val) {
         Node temp = head;
         if(head == null) {
-            head = new Node(val);
+            this.head = new Node(val);
             return;
         }
         boolean notDone = true;
