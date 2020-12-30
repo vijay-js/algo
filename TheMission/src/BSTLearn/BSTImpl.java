@@ -186,6 +186,58 @@ public class BSTImpl {
         System.out.println(o);
     }
 
+    //value to be deleted
+    public static Node delete(Node head, int val) {
+        if(head == null) {
+            return null;
+        }
+        if(val < head.val) {
+            head.left = delete(head.left,val);
+        }
+        if(val> head.val) {
+            head.right = delete(head.right,val);
+        }
+
+        //Main delete case -> Node found
+        else {
+            //Case 1: When the node to be deleted doesn't have children
+            if(head.left == null && head.right == null) {
+                return null;
+            }
+
+            //Case 2 : When the node has 1 child
+
+            if(head.left == null || head.right == null) {
+                if(head.left != null) {
+                    head = head.left;
+                    return head;
+                }
+                if(head.right != null) {
+                    head = head.right;
+                    return head;
+                }
+            }
+
+
+            //Case 3 : When 2 children present findMin of right  subtree and replace the data
+
+            else {
+                int min = findMin(head.right);
+                head.val = min;
+                head.right = delete(head.right,val);
+                return head;
+            }
+
+        }
+        return head;
+    }
+
+    public static int findMin(Node head) {
+        if(head == null) return -1;
+        if(head.left == null) return head.val;
+        return findMin(head.left);
+    }
+
     public static void main(String[] args) {
             BSTImpl bst = new BSTImpl();
             BSTImpl bst1 = new BSTImpl();

@@ -18,6 +18,7 @@ public class LevelOrderTraversalLineByLine {
         bst.getHead().left.right = new Node(9);
         bst.getHead().left.left.left = new Node(4);
         levelOrderTraversalLineByLine(bst.getHead());
+        levelByLine(bst.getHead());
     }
 
     public static void levelOrderTraversalLineByLine(Node head) {
@@ -42,6 +43,36 @@ public class LevelOrderTraversalLineByLine {
             System.out.println();
         }
 
+
+    }
+
+
+    public static void levelByLine(Node head) {
+        Queue<Node> queue = new LinkedList<>();
+
+        if(head != null) {
+            queue.add(head);
+        }
+
+        while(!queue.isEmpty()) {
+
+            int size = queue.size();
+            for(int i=0;i<size;i++) {
+                Node el = queue.poll();
+                System.out.print(el.val + " ");
+
+                if(el.left !=null) {
+                    queue.add(el.left);
+                }
+                if(el.right != null) {
+                    queue.add(el.right);
+                }
+
+            }
+            System.out.println();
+
+
+        }
 
     }
 }
