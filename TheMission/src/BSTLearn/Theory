@@ -27,6 +27,10 @@ Traversals
      >>Space Complexity
             Max depth in implicit stack  of recursion is dependent on max depth of the tree O(h)
 
+>> ZigZag Traversal
+    - Same level order - can be done using 2 stacks or queue and a stack
+    - Idea for a better solution using a single queue is to have deliemeters determining the levels while storing in array from queue and then use delimeters to reverse the segments between deliemeters
+
 
 
 
@@ -38,3 +42,6 @@ IMPORTANT  RECAP
         1. If no children for the node -> Just remove the node
         2. If the node has 1 child -> Replace the node with the data from the node below and delete the below node
         3. If the node has more than 2 children -> FindMin from the right subtree and replace that value in the node and delete the node as in case 1 or case 2. Since the min node wont have left child => it will fall in the case of 1 or 2
+
+
+>> CHECK RIGHT VIEW OF A TREE WITH DFS ==> Key idea is to maintain depth while dfs and use this info
