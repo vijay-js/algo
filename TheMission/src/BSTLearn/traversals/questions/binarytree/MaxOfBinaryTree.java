@@ -1,4 +1,8 @@
-package BSTLearn;
+package BSTLearn.traversals.questions.binarytree;
+
+import BSTLearn.BSTImpl;
+import BSTLearn.Node;
+
 //This is for a Binary Tree
 public class MaxOfBinaryTree {
     public static void main(String[] args) {

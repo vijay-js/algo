@@ -45,3 +45,7 @@ IMPORTANT  RECAP
 
 
 >> CHECK RIGHT VIEW OF A TREE WITH DFS ==> Key idea is to maintain depth while dfs and use this info
+
+
+>> Question for Check Balanced Binary Tree
+  --> Tricky O(n) solution instead of O(n2)

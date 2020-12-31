@@ -1,4 +1,4 @@
-package BSTLearn.traversals.questions;
+package BSTLearn.traversals.questions.binarytree;
 
 import BSTLearn.BSTImpl;
 import BSTLearn.Node;
