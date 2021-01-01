@@ -5,8 +5,11 @@ import BSTLearn.Node;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class PrintRootToLeafPaths {
+
+   static  Stack<Integer> stack = new Stack<>();
 
     public static void main(String args[]) {
         List<String> paths = new ArrayList<>();
@@ -27,7 +30,7 @@ public class PrintRootToLeafPaths {
         bst.getHead().left.right.right.right =new Node(110);
 
         print(bst.getHead(),paths,"");
-
+        printUsingStack(bst.getHead());
         System.out.print(paths);
     }
 
@@ -44,4 +47,30 @@ public class PrintRootToLeafPaths {
         print(head.right,paths,pattern+","+head.val);
 
     }
+
+
+    //Another way is to use stack to print the path
+
+    //Interestoing
+
+    public static void printUsingStack(Node head)  {
+        if(head == null) {
+            return;
+        }
+        stack.push(head.val);
+        if(head.left == null && head.right == null) {
+            printStack(stack);
+        }
+        printUsingStack(head.left);
+        printUsingStack(head.right);
+        stack.pop();
+    }
+
+    public static void printStack(Stack<Integer> stack) {
+        for(Integer i: stack) {
+            System.out.print(i +  ",");
+        }
+        System.out.println();
+    }
+
 }
