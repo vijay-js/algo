@@ -4,17 +4,23 @@ public class Node {
      public Node left;
      public Node right;
      public int val;
+     public Node nextRight;
 
+     public Node() {
+
+     }
     public Node(int val) {
         this.val = val;
         this.left= null;
         this.right = null;
+        this.nextRight = null;
     }
 
     public Node(int val, Node left, Node right) {
         this(val);
         this.left = left;
         this.right = right;
+        this.nextRight = null;
     }
 
     public Node getLeft() {
