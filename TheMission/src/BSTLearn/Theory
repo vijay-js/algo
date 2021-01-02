@@ -53,3 +53,8 @@ IMPORTANT  RECAP
 
 >> Check PrintAncestors of a Node -> Good for recap
 >> Also see how to use and pop off stack by seeing PrintRootToLeafPaths
+
+>> LOWEST COMMON ANCESTOR => Is used to find distance between two nodes  -> Find lcs for two nodes and distance is distance from node1 to ancestor + node2 to ancestor
+
+
+>> Check for Complete Binary TRee HEight -> Cool usage
