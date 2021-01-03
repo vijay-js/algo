@@ -11,6 +11,25 @@ public class LowestCommonAncestorOfTwoNodes {
 
     }
 
+    //Only 1 traversal required for efficient solution
+    public static Node findLCAEfficient(Node head,int val1,int val2) {
+        if(head == null) return null;
+
+        if(head.val == val1 || head.val == val2) return head;
+
+        Node leftLCA = findLCAEfficient(head.left,val1,val2);
+        Node rightLCA = findLCAEfficient(head.right,val1,val2);
+
+
+        if(leftLCA !=null && rightLCA!=null) return head;
+
+        if(leftLCA !=null) return leftLCA;
+
+        if(rightLCA !=null) return rightLCA;
+
+        return null;
+    }
+
     public static int findLCA1(Node head, Node node1, Node node2) {
         ArrayList<Integer> arrayList1= new ArrayList<>();
         ArrayList<Integer> arrayList2= new ArrayList<>();

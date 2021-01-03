@@ -163,6 +163,19 @@ public class BSTImpl {
         else  return Search(head.getRight(),val);
     }
 
+    private boolean SearchIter(Node head, int val) {
+        if(head == null) return false;
+
+        Node current = head;
+
+        while(current!=null) {
+            if(current.val == val) return true;
+            if(val > current.val) current = current.right;
+            else current = current.left;
+        }
+        return false;
+    }
+
     public void Print(Node head) {
         if(head != null) {
             System.out.print(head.getVal() + " ");
