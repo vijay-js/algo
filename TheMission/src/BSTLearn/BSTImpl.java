@@ -199,6 +199,42 @@ public class BSTImpl {
         System.out.println(o);
     }
 
+    public static Node delete1(Node head, int val) {
+
+        if(head == null) return null;
+
+        if(val > head.val) {
+            head.right = delete1(head.right,val);
+        }
+        else if(val < head.val) {
+            head.left = delete1(head.left,val);
+        }
+
+        else {
+            if(head.left == null && head.right == null) {
+                return null;
+            }
+            else if(head.left == null && head.right !=null) {
+                return head.right;
+            }
+            else if(head.right == null && head.left !=null) {
+                return head.left;
+            }
+
+            else {
+                int min = findMin(head.right);
+                head.val = min;
+                head.right =  delete(head.right,min);
+                return head;
+            }
+
+
+        }
+        return head;
+
+    }
+
+
     //value to be deleted
     public static Node delete(Node head, int val) {
         if(head == null) {

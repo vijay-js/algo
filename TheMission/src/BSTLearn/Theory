@@ -58,3 +58,7 @@ IMPORTANT  RECAP
 
 
 >> Check for Complete Binary TRee HEight -> Cool usage
+
+>>> AWESOME - Find Max BST in Binary TRee ==> Key idea is to pass info from nodes in post order travsersal (min, max, isBST, sizeOfBST)
+
+https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/LargestBSTInBinaryTree.java
