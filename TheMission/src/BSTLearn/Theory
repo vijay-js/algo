@@ -62,3 +62,17 @@ IMPORTANT  RECAP
 >>> AWESOME - Find Max BST in Binary TRee ==> Key idea is to pass info from nodes in post order travsersal (min, max, isBST, sizeOfBST)
 
 https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/LargestBSTInBinaryTree.java
+
+
+
+For Binary Search Tree Questions
+
+>> using a temp pointer to node and using while loop instead of recursion for problems mostly helps
+
+Finding kth-smallest or rank of an element -> We need to augment the Node data structure to include the left node count rather than the rank itself because on addition or deletion of node => we need to recompute rank where as for left count we only need to update left count while searching for deletion / insertion.
+
+
+
+
+
+
