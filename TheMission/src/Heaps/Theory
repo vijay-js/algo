@@ -1,0 +1,39 @@
+Binary Heaps :
+
+>> Used in Heap Sort
+>> Used to implement Priority Queue
+
+
+>> Binary Heap is always a complete binary tree (All level are full execpt possibly last level and nodes are as left as possible)
+
+Binary heap is stored in the form of an array
+Left Child of a node is at 2(i) + 1 index
+Right Child => 2i + 2 index
+
+Parent of a node at index i => Math.floor((i -1)/2)
+
+
+MIN HEAP
+
+>> Complete binary tree
+>> Smallest node at the root
+>> Every node should have smaller value than descendants
+
+
+>> IMP ::
+
+Building a heap from a random array takes O(n) time and not O(n log n) though we use heapify
+
+So heap sort
+
+1st step is maintain maxHeap from an array and return the max element for selection sort in O(1) time. Creating maxHeap from an array is O(n) time
+
+
+PRIORITY QUEUE IN JAVA
+
+>> PriorityQueue<Integer> = new PriorityQueue<>();
+By default Java Pririty Queue is minHeap
+
+//MAX HEAP
+>> PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+
