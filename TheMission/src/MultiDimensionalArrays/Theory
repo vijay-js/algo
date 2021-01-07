@@ -40,7 +40,7 @@ DIAGONAL MATRIX PRINT ::
 
 SPIRAL ORDER OF MATRIX ::
 
->> Keep 4 points for tracing the boundaries => Print Top Row, Last Column, Bottom Row, First Column and keep reduscing the boundaries after printing;
+>> Keep 4 points for tracing the boundaries => Print Top Row, Last Column, Bottom Row, First Column and keep reducing the boundaries after printing;
 
 
 

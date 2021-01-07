@@ -1,0 +1,20 @@
+Nice playlist for mental model
+https://www.youtube.com/watch?v=6PX6wqDQE20&list=PLEJXowNB4kPyi859E6qGUs7jlpQehJndl&index=1&ab_channel=TECHDOSE
+
+
+
+>> Used in Dictionary
+
+>> Searching a word is done in O(word length) time;
+
+>> Very good in finding prefixes
+
+>> Instead of maintaining a boolean for wordEnd -> Instead maintain a counter for each word -> So that we can maintain a counter on how many times the word is inserted;
+
+>> Also using the prefix counter makes deletion of a node in trie easier.
+
+
+Patterns
+
+
+>> For counting and answer counts for prefixes ==> One way is to augument trie with counts while inserting
