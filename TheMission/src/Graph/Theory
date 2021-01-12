@@ -1,0 +1,53 @@
+Representation of Graphs in Memory
+
+1. Edge List
+        >> Store all the vertices and edges in 2 different lists
+        >> Time complexity for various operations like adjacent node or if two nodes are connected are O(E); They are in the order number of edges as we have to loop through the edge list linearly to see if the path exists
+        >> As for a graph with N vertices -> there can be a max of N(N-1) edges in directed graph and N(N-1)/2 edges in undirected graph. So the number of edges are in (O N^2) . So we need a better representation of graph in memory.
+
+        We often want to keep the cost in the order of number of vertices than the edges.
+
+2. Adjacency Matrix Representation
+
+    >> V*V matrix and represent in the matrix as 1 if there's and edge. The indices of vertices can be pulled from vertex list stored.
+    >> In this case - finding the adjacent nodes would be
+            >> Scan the vertex list to get the index of the node to be searched O(V)
+            >> Go to that row and scan that row only to find 1's which means nodes which are connected. (O(V) to scan and O(V) for getting the names of vertices connected)
+            >> We can also store vertices and indices in a HashMap to avoid O(V) time to O(1) for extra space.
+
+    >> To represent the adjacency matrix in Weighted graph - instead of 1 -> A[i][j] can be represented as weight and rest as Infinity(or any invalid edge weight to show that there is no edge)
+
+    >> In this memory representation -> We are using O(V*V) space instead of O(V) space in the Edge List representation.
+    >> If graph is sparse -> then too much wastage of space in this representation
+    >> This representation is good if graph is dense or O(V*V) is too less to matter.
+
+
+3. Adjacency List Representation
+
+    >> The key idea here is to realise that when we store 0s in adjacency matrix that we are storing redundant info. If we only store the nodes to which the current node is connected - we can deduce that other nodes are not connected.
+    >> We can store this info in the form of Linked List or Balancing Binary tree of any other data structure.
+    >> Space complexity is O(E) => Good for sparse graphs which are real world scenarios.
+    >> Here we need to scan the list for a particular node to check if the connection exists unlike previously its an O(1) operation just seeing A[i][j] in the matrix. Now we need to scan the entire row of A[i] . Worst case would be O(v) or O(log v) in case of Binary Search. But for Binary Search - we need to keep this array always sorted which is costly in other ways.
+    >> For finding neighbours -> O(V) again
+    >> Since the time complexity is O(V) - we might think that it is not good but for sparse graphs and real world scenario - this is better as mostly all info is sparse.
+
+
+
+Breadth First Search
+
+>> Enqueue the source vertex and then mark it as visited. Then poll the item -> Traverse the adjacency list of the polled vertex and if its not visited -> Enqueue to the queue and mark as visited. Repeat for all vertices in case of non connected graph
+
+   Usages
+   >> BFS always prints the closest element from the source first.
+   >> SHORTEST PATH IN UNWEIGHTED GRAPH (Because the vertex will be reached in shortest time)
+   >> # of CONNECTED COMPONENTS IN UNWEIGHTED GRAPH
+
+Depth First Search
+
+>> Mark the source as visited and recur the DFS to all the vertices in the adjacency list of the source. Recur for the entire graph
+
+    Usages
+    >> Topological Sorting
+    >> Strongly Connected Components
+    >> Solving Puzzles like Maze and Similar Puzzles
+    >> Path Finding

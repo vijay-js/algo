@@ -14,6 +14,7 @@ a[i][j] = a[j][i]
 -- For a square matrix - It is just switching rows with columns and columns with rows.
 
 >>> Important to note that Transpose of a matrix can be done in place with just swapping opposite elements in diagonals.
+-> This can be done by running a loop while traversing row wise -> running a column loop from i+1 to end and swap elements
 
 
 
@@ -23,14 +24,6 @@ ROTATION OF MATRIX (USE TRANSPOSE)
 >> Rotation of a matrix can be done using a
     >> Transpose of a matrix and then
     >> reversing either row or column
-
-
-SEARCH IN SORTED MATRIX ::
-
-2 variations ::
-   > Only row wise sorted and column wise sorted --> Step wise -> Start from last column of first row and either decrement column or increament row
-   > FULLY SORTED
-        > Treat as array and binary search. row => mid / n ; col = mid%n
 
 
 
@@ -43,5 +36,21 @@ SPIRAL ORDER OF MATRIX ::
 >> Keep 4 points for tracing the boundaries => Print Top Row, Last Column, Bottom Row, First Column and keep reducing the boundaries after printing;
 
 
+
+SEARCH IN SORTED MATRIX ::
+
+2 variations ::
+   > Only row wise sorted and column wise sorted --> Step wise -> Start from last column of first row and either decrement column or increament row
+   > FULLY SORTED
+        > Treat as array and binary search. row => mid / n ; col = mid%n
+
+
+
+
+Questions to Try
+
+
+The key point in diagonal traversal is that the sum of r+c is same for all elements in diagonals
+:: Check Diagonal Traveral Of Matrix LeetCode
 
 

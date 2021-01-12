@@ -1,5 +1,7 @@
 package MultiDimensionalArrays;
 
+import java.util.Arrays;
+
 public class TwoDArraysLearn {
     public static void main(String[] args) {
         int a[][] = new int[4][4];
@@ -13,6 +15,9 @@ public class TwoDArraysLearn {
         helper.printArray(a);
 
         reverseColumns(a);
+        helper.printArray(a);
+
+        revColumns2(a);
         helper.printArray(a);
 
         /*
@@ -77,6 +82,15 @@ public class TwoDArraysLearn {
         }
     }
 
+    private static void revColumns2(int a[][]) {
+        System.out.println("Reversing Columns 2");
+        for(int i=0;i<a.length/2;i++) {
+            int temp[] = Arrays.copyOf(a[i],a[i].length);
+            int temp2[] = Arrays.copyOf(a[a.length -i -1],a[a.length-i-1].length);
+            a[a.length -i -1] = temp;
+            a[i] = temp2;
+        }
+    }
 
 
 }

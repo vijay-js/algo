@@ -1,6 +1,9 @@
 package Trie.questions;
 
-//Given a set of strings, find the longest common prefix.
+//Given a set of strings, find the longest common prefix
+//
+//
+// //https://www.geeksforgeeks.org/longest-common-prefix-using-trie/?ref=rp.
 public class FindLongestCommonPrefix {
 
     public static void main(String[] args) {
@@ -13,7 +16,6 @@ public class FindLongestCommonPrefix {
 
         System.out.println(findCommonPrefix(trie.root,4,"apple"));
     }
-//https://www.geeksforgeeks.org/longest-common-prefix-using-trie/?ref=rp
     public static String findCommonPrefix(TrieNode root,int numWords,String word) {
         int answer =0;
 

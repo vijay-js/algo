@@ -63,4 +63,35 @@ public class helper {
             System.out.print(columnArray[i] + " ");
         }
     }
+
+    public static void printColumnW(int a[][], int colNumber) {
+        int ans[] = new int[a.length];
+
+        for(int i=0;i<a.length;i++) {
+            System.out.print(a[i][colNumber]);
+        }
+    }
+
+    public static void printCWiseWithDiffColumns(int [][] arr) {
+        int c = getMaxNumberOfColumns(arr);
+        for(int j=0;j<c;j++) {
+            for(int i=0;i<arr.length;i++) {
+                try {
+                    System.out.print(arr[i][j] + " ");
+                }
+                catch (Exception e) {
+
+                }
+                System.out.println();
+            }
+        }
+    }
+
+    private static int getMaxNumberOfColumns(int [][] a) {
+        int answer = 0;
+        for(int i=0;i<a.length;i++) {
+             answer = Math.max(answer,a[i].length);
+        }
+        return answer;
+    }
 }

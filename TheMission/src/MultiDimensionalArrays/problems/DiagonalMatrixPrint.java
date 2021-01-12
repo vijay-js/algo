@@ -2,9 +2,11 @@ package MultiDimensionalArrays.problems;
 
 import MultiDimensionalArrays.helper;
 
-public class DiogonalMatrixPrint {
+public class DiagonalMatrixPrint {
     public static void main(String[] args) {
-        int a[][] = new int[3][3];
+//        int a[][] = new int[3][3];
+
+        int a[][] = {{1,2},{1,2,4}};
         helper.initInSequence(a);
         helper.printArray(a);
         printDiagonalElements(a);
@@ -33,4 +35,5 @@ public class DiogonalMatrixPrint {
             }
         }
     }
+
 }
