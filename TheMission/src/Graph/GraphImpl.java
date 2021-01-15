@@ -16,6 +16,17 @@ public class GraphImpl {
 
 
 
+    public GraphImpl addDirectedEdge(Edge e) {
+        Vertex source = e.source;
+        Vertex destination = e.destination;
+
+        //First find the source and destination indices from the Vertices List
+        int src = getVertexIndex(source);
+        int dest = getVertexIndex(destination);
+
+        adjacencyList.get(src).add(dest);
+        return this;
+    }
 
     public GraphImpl addEdge(Edge e) {
         Vertex source = e.source;
@@ -84,6 +95,9 @@ public class GraphImpl {
         System.out.println();
 
         ShortestPathInUnweightedGraph.shortestPath(graph,v1);
+
+        System.out.println();
+        ShortestPathInUnweightedGraph.shortestDistanceFromSource(graph,v1);
 
     }
 

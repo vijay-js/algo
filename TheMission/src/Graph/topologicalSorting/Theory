@@ -1,0 +1,21 @@
+Topological Sort ::
+
+This is to detect dependencies in an uncyclic directed graph.
+
+2 ways :
+
+1. Kahn's BFS :
+    >>Calculate Indegree for each vertex ::
+        Calculate inward edges either while adding an edge to graph -> Just increase count for destination vertex in the Edge
+    >> Create a Queue q
+    >> Push all the vertices of indegree 0 to the queue
+    >> Process the queue and for all the adjacent vertices of the vertex in queue - reduce the indegree of its neighbour by 1 and if neigbour indegree becomes 0 - push that to queue.
+
+
+2. DFS
+
+    >> Do a normal DFS from any vertex in the graph
+    >> Once all the dependencies are pushed - push that vertex to stack
+    >> Process stack and print vertices once dfs is done
+
+

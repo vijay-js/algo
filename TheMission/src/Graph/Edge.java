@@ -5,7 +5,7 @@ public class Edge {
     Vertex destination;
     int weight;
 
-    Edge(Vertex src, Vertex dest) {
+    public Edge(Vertex src, Vertex dest) {
         this.source = src;
         this.destination = dest;
         this.weight = 0;

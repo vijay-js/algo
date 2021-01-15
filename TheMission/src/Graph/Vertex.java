@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Vertex {
     public String name;
 
-    Vertex(String name) {
+    public Vertex(String name) {
         this.name = name;
     }
 

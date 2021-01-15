@@ -1,0 +1,15 @@
+In Undirected Graph ::
+
+Key insight is that except parent while traversing if there is any edge to visited vertex -> there is a cycle
+
+While BFS or DFS -> If other than the parent node any other visited node is part of your adjacency list - Cycyle exists print that
+
+
+In Directed Graph
+
+While DFS -> Entire path is in the stack - so if node is already visited => enough because even if parent comes - > then its a cycle
+
+With BFS =>
+
+Use Khans's BFS via indegrees for topological sorting  -> Count the number of time vertex is popped from queue. If count
+

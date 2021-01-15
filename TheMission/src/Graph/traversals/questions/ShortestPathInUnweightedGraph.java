@@ -5,8 +5,51 @@ import Graph.Vertex;
 
 import java.util.*;
 
+//Every distance can be calculated from prev distance in bfs
 
 public class ShortestPathInUnweightedGraph {
+
+    public static int[] shortestDistanceFromSource(GraphImpl graph, Vertex src) {
+        int numVertices = graph.vertices.size();
+
+        boolean visisted[] = new boolean[numVertices];
+        int dist[] = new int[numVertices];
+
+        for(int i=0;i<numVertices;i++) {
+            dist[i] = Integer.MAX_VALUE;
+        }
+
+
+
+        Queue<Vertex> queue = new LinkedList<>();
+        queue.add(src);
+        dist[graph.getVertexIndex(src)] = 0;
+        visisted[graph.getVertexIndex(src)] = true;
+
+
+        while(!queue.isEmpty()) {
+            Vertex v = queue.poll();
+            int idx = graph.getVertexIndex(v);
+            List<Integer> list = graph.adjacencyList.get(idx);
+
+            for(int i: list) {
+                if(visisted[i] !=true) {
+                    dist[i] = dist[idx] + 1;
+                    queue.add(graph.getVertex(i));
+                    visisted[i] = true;
+                }
+
+            }
+
+        }
+
+
+        for(int i=0;i<numVertices;i++) {
+            System.out.println(graph.getVertex(i).name + " -> " + dist[i]);
+        }
+
+        return dist;
+    }
 
     public static Map<Vertex,Integer>  shortestPath(GraphImpl graph, Vertex src) {
 
