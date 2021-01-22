@@ -1,5 +1,6 @@
 package RecursionLearn.permutationsAndSubsets;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -41,5 +42,24 @@ public class GenerateGrammar {
             }
 
         }
+    }
+
+
+    public static int getGrammar(int N,int K) {
+        if(N==1) return 0;
+
+        int lengthOfRow = (int)Math.pow(2,N-1);
+        int mid = lengthOfRow/2;
+
+        //It's same as prev Row.
+        if(K<=mid) {
+            return getGrammar(N-1,K);
+        }
+
+        else {
+            int returnedVal = getGrammar(N-1,K-mid);
+            return returnedVal == 0 ? 1 : 0;
+        }
+
     }
 }

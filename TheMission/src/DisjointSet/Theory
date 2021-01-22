@@ -1,0 +1,4 @@
+>>Identify if problems talks about finding groups or components.
+
+ -> Find() -> Returns a parent pointer of that set
+ >> Union => Combines parent of two sets
