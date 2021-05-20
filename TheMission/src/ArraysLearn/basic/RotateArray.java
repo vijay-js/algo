@@ -5,12 +5,21 @@ import ArraysLearn.ArrayHelper;
 public class RotateArray {
 
     public static void main(String[] args) {
-        int a[] = ArrayHelper.generateRandomArray(10);
+//        int a[] = ArrayHelper.generateRandomArray(10);
+//
+//        ArrayHelper.printArray(a);
+//
+//        int newArray[] = rotateArray(a,2);
+//        ArrayHelper.printArray(newArray);
 
-        ArrayHelper.printArray(a);
 
-        int newArray[] = rotateArray(a,2);
-        ArrayHelper.printArray(newArray);
+        int b[] = ArrayHelper.generateSequenceArray(10);
+        ArrayHelper.printArray(b);
+        rotate(b,6);
+        ArrayHelper.printArray(b);
+
+
+
     }
 
     //Naive Way . Instead reverseArray twice and finally revserAgain
@@ -29,6 +38,25 @@ public class RotateArray {
             i++;
         }
         return  a2;
+    }
+
+    private static void rotate(int a[],int d) {
+        d = d%a.length;
+        reverseArray(a,0,d-1);
+        reverseArray(a,d,a.length-1);
+        reverseArray(a,0,a.length-1);
+    }
+
+    private static void reverseArray(int a[], int start,int end) {
+
+        while(start<end) {
+            int temp = a[start];
+            a[start] = a[end];
+            a[end] = temp;
+            start++;
+            end--;
+        }
+
     }
 
 

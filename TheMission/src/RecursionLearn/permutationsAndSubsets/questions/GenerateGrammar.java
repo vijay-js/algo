@@ -1,4 +1,4 @@
-package RecursionLearn.permutationsAndSubsets;
+package RecursionLearn.permutationsAndSubsets.questions;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

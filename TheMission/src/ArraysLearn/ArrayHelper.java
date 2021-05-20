@@ -12,6 +12,14 @@ public class ArrayHelper {
         System.out.println();
     }
 
+    public static int[] generateSequenceArray(int n) {
+        int a[] = new int[n];
+        for(int i=0;i<n;i++) {
+            a[i] = i+1;
+        }
+        return a;
+    }
+
 
     public static int[] generateRandomArray(int n) {
         int a[] = new int[n];

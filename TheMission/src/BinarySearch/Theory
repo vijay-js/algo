@@ -1,11 +1,11 @@
 >> Sorted Arrays and how to search in sorted array - Recursive and Iterative Implementation
 
 >> IMPORTANT OBSERVATION::
-        -- Note that in binary search algo -=> IF key is not present - the low index will always be pointing at the correct position of insertuin after coming out of the loop ::: SO LOW will give insert position
+        -- Note that in binary search algo -=> IF key is not present - the low index will always be pointing at the correct position of insertion after coming out of the loop ::: SO LOW will give insert position
 
 >> Finding first or last occurence in sorted array
 
->> Count #of occurences in soredt array (Above method)
+>> Count #of occurences in sorted array (Above method)
 
 
 
