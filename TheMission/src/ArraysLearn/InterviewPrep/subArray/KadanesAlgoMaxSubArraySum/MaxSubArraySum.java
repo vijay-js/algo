@@ -6,39 +6,39 @@ package ArraysLearn.InterviewPrep.subArray.KadanesAlgoMaxSubArraySum;
 
 public class MaxSubArraySum {
     public static void main(String[] args) {
-        int a[]= {-1,-2,-6,93,-1,-2,-4,-8,-12};
+        int a[]= {1,2,-6,-3,-1,-2,-4,-8,-1};
 
-        int sum = findMaxSum(a);
-        System.out.println(sum);
+        int sum1 = findMaxSubArraySum(a);
+        System.out.println( sum1);
     }
 
-    private static int findMaxSum(int a[]) {
+    private static int findMaxSubArraySum(int a[]) {
         int sum = 0;
-        int max_sum = Integer.MIN_VALUE;
-        int start =0;
-        int end =0;
+        int maxSum = Integer.MIN_VALUE;
+        //marker for next possible start index.
+        int s = 0;
+        int startIndex = 0;
+        int endIndex = -1;
 
-        int finalStart =0;
-
+       //Only when the sum is larger than before update both start and end
         for(int i=0;i<a.length;i++) {
             sum = sum + a[i];
-            if(sum <= 0) {
-                sum =0;
-                start=i+1;
-            }
-            else {
-                max_sum  = Math.max(max_sum,sum);
-                if(sum == max_sum) {
-                    finalStart = start;
-                    end = i;
+            if(sum > 0) {
+                if(sum > maxSum) {
+                    maxSum = sum;
+                    //Start would be already marked in s - end can be this
+                    startIndex = s;
+                    endIndex = i;
                 }
             }
-
+            else {
+                sum = 0;
+                //Mark the next possible start
+                s = i +1;
+            }
         }
 
-        System.out.println("Start Index : "+finalStart);
-        System.out.println("End Index : "+end);
-        return max_sum;
-
+        System.out.println(startIndex + "--" + endIndex);
+        return maxSum;
     }
 }

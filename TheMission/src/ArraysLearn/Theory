@@ -5,6 +5,16 @@ Generally speaking, if you need to generate numbers from min to max (including b
     rand.nextInt(max - min + 1) + min
 
 
+List<Integer> to Integer[] array
+        - List<Integer> answer = new ArrayList<>();
+        - return answer.toArray(new Integer[answer.size()]);
+
+
+Stack To Array
+
+        - Integer[] ans = Arrays.copyOf(stack.toArray(),stack.size(),Integer[].class);
+
+
 Rotate an Array
 
 >> Works with Reversing an Array
@@ -45,5 +55,11 @@ Questions and Patterns
 >> Leaders in an array  -- Traverse from end and Store max from end
 >> Trapping Rainwater -- Store max from start and max from end - and compute volume of water than can be stored.
 >> Stock Buy and Sell --
+>>Majority Element - Bayer's Moores
+Searching Patterns for a sorted array ::
+        - To find the sum pair equal or closest to x
+        - Idea is to have two pointers one from the largest end of the other array and the other from the smallest element of one array
+        - Traverse and move the pointers based on conditions
+
 
 

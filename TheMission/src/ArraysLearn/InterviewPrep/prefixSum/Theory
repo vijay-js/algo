@@ -3,3 +3,10 @@ Questions
 >> Sum with in a range over multiple queries
 >> Equilibrium point - > By storing over all sum in one pass and right count and left count in one go
 >> Given n ranges Find max occuring element in all ranges
+ --> Given ranges as 2 arrays left_ranges [1,2,3,5] -> right_ranges [5,4,8,9]
+
+            -> Mark all left ranges as 1 and right+1 as -1 so as not to count in prefix sum
+            -> Do prefix sum and whatever is the max value -> the index of the
+
+--> Split array into 3 parts of equal sum
+        -> First see if sum of total array is divisble by 3 . If so ... See if s/3 and 2s/3 exist in prefix sum of the array
