@@ -1,5 +1,6 @@
 package ArraysLearn.InterviewPrep.prefixSum;
 
+//Key Observation is to see that
 public class SplitArrayIntoThreePartsOfEqualSum {
     public static void main(String[] args) {
         int arr[] = new int[] {1, 3, 4, 0, 4};

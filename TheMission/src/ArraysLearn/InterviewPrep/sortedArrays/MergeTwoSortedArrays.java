@@ -1,4 +1,4 @@
-package Misc;
+package ArraysLearn.InterviewPrep.sortedArrays;
 
 public class MergeTwoSortedArrays {
 
