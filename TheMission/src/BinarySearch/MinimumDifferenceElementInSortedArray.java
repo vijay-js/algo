@@ -1,5 +1,8 @@
 package BinarySearch;
 
+//The Key finding for this problem is post Binary search => the low and high points to the two adjacent values
+//of the element if it needs to be inserted.
+// So just do Binary Search
 public class MinimumDifferenceElementInSortedArray {
     public static void main(String[] args) {
         int a[] = {1,3,8,10,15};

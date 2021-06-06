@@ -1,11 +1,15 @@
 >> Sorted Arrays and how to search in sorted array - Recursive and Iterative Implementation
 
 >> IMPORTANT OBSERVATION::
-        -- Note that in binary search algo -=> IF key is not present - the low index will always be pointing at the correct position of insertion after coming out of the loop ::: SO LOW will give insert position
+        -- Note that in binary search algo -=> IF key is not present - the low index will always be pointing at
+        the correct position of insertion after coming out of the loop ::: SO LOW will give insert position
 
 >> Finding first or last occurence in sorted array
 
->> Count #of occurences in sorted array (Above method)
+>> Count #of occurences of an element in sorted array (Above method)
+    -> First find firstOccurence
+    => First find lastOccurence
+    -> return lastIndex - firstIndex + 1
 
 
 
@@ -20,8 +24,10 @@
 
 >>> MEDIAN OF TWO SORTED ARRAYS :::
     - Find parition in the smallest array (Tushar Roy Video)
-    - so that elements in left half of partitoin are less then right half of partiotion
+    - so that elements in left half of partitoin are less then right half of partition
     - partitionX + partitionY = (A.length + B.length + 1)/2
+
+>> Kth Largest Element in 2 Sorted Arrays
 
 
 SEARCH IN A NEARLY SORTED ARRAY ::

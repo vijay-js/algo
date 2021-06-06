@@ -6,6 +6,7 @@ public class NumberOfTimesRotatedArray {
         int a[] = {4,5,6,7,0,1,2};
 
         System.out.println(findIndexOfMinElement(a));
+        System.out.println(findNumTimesRotated(a));
 
     }
 
@@ -16,6 +17,7 @@ public class NumberOfTimesRotatedArray {
         int high = a.length -1;
 
         while(low <=high) {
+            //Very important Condition -> If its already sorted => Return the first element
             if(a[low] <=a[high]) return low;
 
             int mid = low + (high-low)/2;
@@ -36,6 +38,35 @@ public class NumberOfTimesRotatedArray {
                 high = mid -1;
             }
         }
+        return -1;
+    }
+
+    private static int findNumTimesRotated(int a[]) {
+        int low =0;
+        int high = a.length -1;
+
+
+        while(low <=high) {
+            if(a[low] <=a[high]) return low;
+            int mid = low + (high -low)/2;
+
+            int prev = mid <= low ? a[mid] : a[mid-1];
+            int next = mid >= high ? a[mid] : a[mid+1];
+
+            if(a[mid] <= prev && a[mid] <= next) {
+                return mid;
+            }
+
+            //Left half is sorted - Go to right half
+            if(a[low] <= a[mid]) {
+                low = mid+1;
+            }
+            else {
+                high = mid-1;
+            }
+
+        }
+
         return -1;
     }
 }
