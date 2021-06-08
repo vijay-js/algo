@@ -29,6 +29,7 @@ ROTATION OF MATRIX (USE TRANSPOSE)
 
 DIAGONAL MATRIX PRINT ::
 >> See the start elements of each diagonal -> first row and last column (and print the elements based on the increment)
+The key point in diagonal traversal is that the sum of r+c is same for all elements in diagonals
 
 
 SPIRAL ORDER OF MATRIX ::
