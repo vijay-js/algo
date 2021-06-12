@@ -1,4 +1,4 @@
-package RecursionLearn.permutationsAndSubsets;
+package RecursionLearn.permutationsAndSubsets.subsets;
 //
 //      Given a set with distinct elements, find all of its distinct subsets.
 //

@@ -1,4 +1,4 @@
-package RecursionLearn.permutationsAndSubsets;
+package RecursionLearn.permutationsAndSubsets.subsets;
 
 
 /*
