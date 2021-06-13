@@ -43,6 +43,23 @@ public class AllSubsetsOfString {
         RecSubSets(str.substring(1),output);
     }
 
+    public static List<String> iter(String str) {
+        List<String> ans = new ArrayList<>();
+        ans.add("");
+        for(char c: str.toCharArray()) {
+            //Get current subsets size
+            int n = ans.size();
+            //Loop over each of them and add current string
+
+            for(int i=0;i<n;i++) {
+                String curr = ans.get(i);
+                String newone = curr + c;
+                ans.add(newone);
+            }
+
+        }
+        return  ans;
+    }
 
     public static List<String> subsetsIterative(String str) {
         List<String> result = new ArrayList<>();

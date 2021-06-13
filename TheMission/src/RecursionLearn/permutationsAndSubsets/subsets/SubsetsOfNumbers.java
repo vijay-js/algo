@@ -29,11 +29,13 @@ public class SubsetsOfNumbers {
         List<List<Integer>> subsets = new ArrayList<>();
         subsets.add(new ArrayList<>());
 
-
+        //Loop over all the individual elements in the array
         for(int i=0;i<arr.length;i++) {
 
+            //Get the current number of subsets
             int currentSubsetSize = subsets.size();
 
+            //Loop over each subset and add this element
             for(int j=0;j<currentSubsetSize;j++) {
                 List<Integer> set = new ArrayList<>(subsets.get(j));
                 set.add(arr[i]);
@@ -59,8 +61,6 @@ public class SubsetsOfNumbers {
 
         RecursiveFindSubsets(arr,current,index+1);
         RecursiveFindSubsets(arr,currentArray,index+1);
-
-
 
     }
 }
