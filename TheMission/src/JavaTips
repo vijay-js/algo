@@ -1,4 +1,8 @@
 >> Convert Object[] Array to Integer Array[]
            Arrays.copyOf(Object[],length,Integer[].class);
 
+>> Integer List to Array
+
+    intList.stream().mapToInt(Integer::intValue).toArray();
+
 >>

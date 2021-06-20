@@ -1,18 +1,25 @@
 package RecursionLearn.permutationsAndSubsets.questions;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class CoinToss {
     public static void main(String[] args) {
-        coinTossOutComes(4,"");
+        coinTossOutComes(3,"");
 
-        List<String> outcomes = coinTossIter(4);
+//        List<String> outcomes = coinTossIter(3);
+//
+//        System.out.println();
+//        for(String o:outcomes) {
+//            System.out.print(o + " ");
+//        }
 
         System.out.println();
-        for(String o:outcomes) {
-            System.out.print(o + " ");
-        }
+
+//        coinToss(3,"");
+        solveIterBetter(3);
     }
 
     public static void coinTossOutComes(int n, String output) {
@@ -50,4 +57,26 @@ public class CoinToss {
         return ans;
     }
 
+
+    public static void solveIterBetter(int n) {
+
+        Queue<String> list = new LinkedList<>();
+        list.add("");
+
+        while(!list.isEmpty()) {
+
+            String curr = list.poll();
+
+            if(curr.length() == n) {
+                System.out.print(curr + " ");
+                continue;
+            }
+            else {
+                list.add(curr + "H");
+                list.add(curr + "T");
+            }
+
+        }
+
+    }
 }

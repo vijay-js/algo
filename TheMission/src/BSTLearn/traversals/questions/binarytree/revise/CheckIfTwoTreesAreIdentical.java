@@ -1,8 +1,8 @@
-package BSTLearn.traversals.questions.binarytree;
+package BSTLearn.traversals.questions.binarytree.revise;
 
 import BSTLearn.Node;
 
-public class CheckIfTwoTreesAreIdentical {
+public  class CheckIfTwoTreesAreIdentical {
     public boolean checkIfIdentical(Node head1, Node head2) {
         if(head1 == null && head2 == null) return true;
 

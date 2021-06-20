@@ -1,4 +1,4 @@
-package BSTLearn.tricky;
+package BSTLearn;
 
 import BSTLearn.BSTImpl;
 import BSTLearn.Node;

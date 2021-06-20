@@ -37,4 +37,20 @@ public class IterativeInOrderTraversal {
         }
 
     }
+
+    public static void solve(Node head) {
+        if(head == null) return;
+        Stack<Node> stack = new Stack<>();
+        
+        Node curr = head;
+        while(!stack.isEmpty() && curr !=null) {
+            while(curr.left != null) {
+                stack.push(curr.left);
+            }
+
+
+        }
+
+
+    }
 }

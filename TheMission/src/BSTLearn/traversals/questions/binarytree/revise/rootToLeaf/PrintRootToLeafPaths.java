@@ -1,4 +1,4 @@
-package BSTLearn.traversals.questions.binarytree.revise;
+package BSTLearn.traversals.questions.binarytree.revise.rootToLeaf;
 
 import BSTLearn.BSTImpl;
 import BSTLearn.Node;
@@ -13,6 +13,7 @@ public class PrintRootToLeafPaths {
 
     public static void main(String args[]) {
         List<String> paths = new ArrayList<>();
+        List<Integer> paths1 = new ArrayList<>();
 
         BSTImpl bst = new BSTImpl();
         bst.setHead(new Node(10));
@@ -32,6 +33,8 @@ public class PrintRootToLeafPaths {
         print(bst.getHead(),paths,"");
         printUsingStack(bst.getHead());
         System.out.print(paths);
+        System.out.println();
+        printYay(bst.getHead(),paths1);
     }
 
     public static void print(Node head, List<String> paths,String pattern) {
@@ -51,7 +54,7 @@ public class PrintRootToLeafPaths {
 
     //Another way is to use stack to print the path
 
-    //Interestoing
+    //Interesting
 
     public static void printUsingStack(Node head)  {
         if(head == null) {
@@ -73,4 +76,23 @@ public class PrintRootToLeafPaths {
         System.out.println();
     }
 
+    public static void printYay(Node head,List<Integer> paths) {
+        if(head == null) return;
+        paths.add(head.val);
+        if(head.left == null && head.right == null) {
+            for(int i: paths) {
+                System.out.print(i + ",");
+            }
+            System.out.println();
+            return;
+        }
+
+        printYay(head.left,paths);
+
+        printYay(head.right,paths);
+
+        paths.remove(paths.size()-1);
+
+
+    }
 }
