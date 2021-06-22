@@ -3,7 +3,7 @@ package BSTLearn.traversals.questions.binarysearchtree;
 import BSTLearn.BSTImpl;
 import BSTLearn.Node;
 
-public class FindInOrderPredecessor {
+public class FindInOrderSucsessor {
     public static void main(String[] args) {
         BSTImpl bst = new BSTImpl();
         bst.setHead(new Node(8));
@@ -16,48 +16,41 @@ public class FindInOrderPredecessor {
         bst.getHead().left.right.left = new Node(4);
         bst.getHead().right.right.left = new Node(13);
 
-        findInorderPredecessor(bst.getHead(),14);
+        solve(bst.getHead(),13);
     }
 
-    public static void findInorderPredecessor(Node head, int x) {
-
+    public static void solve(Node head, int x) {
         Node ans = null;
         if(head == null) return;
 
-
-
-        while(head !=null) {
+        while(head != null) {
             if(head.val == x) {
-                //Case 1 : There's left subTree -> Then return Highest value in left subtree
-                if(head.left !=null ) {
-                    ans = FindMax(head.left);
+                if(head.right !=null) {
+                    ans = FindMin(head.right);
                 }
                 if(ans == null) {
-                    System.out.println("No predecessor");
+                    System.out.println("Not found");
                 }
-                //Case 2 : Store the last right turn while traversing the element
                 else {
                     System.out.println(ans.val);
+                    break;
                 }
-
-                break;
             }
-            else if(head.val < x) {
+            else if(head.val > x) {
                 ans = head;
-                head = head.right;
+                head = head.left;
             }
             else {
-                head = head.left;
+                head = head.right;
             }
         }
 
     }
 
-
-    private static Node FindMax(Node temp) {
-        while(temp != null && temp.right !=null) {
-            temp = temp.right;
+    private static Node FindMin(Node node) {
+        while(node !=null && node.left!=null) {
+            node = node.left;
         }
-        return temp;
+        return node;
     }
 }

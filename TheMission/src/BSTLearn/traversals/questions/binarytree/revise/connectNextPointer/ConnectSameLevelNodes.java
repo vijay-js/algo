@@ -1,4 +1,4 @@
-package BSTLearn.traversals.questions.binarytree.revise;
+package BSTLearn.traversals.questions.binarytree.revise.connectNextPointer;
 
 import BSTLearn.BSTImpl;
 import BSTLearn.Node;
