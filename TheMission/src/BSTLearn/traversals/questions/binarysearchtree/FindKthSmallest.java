@@ -84,13 +84,17 @@ public class FindKthSmallest {
        Node current = head;
 
        while(current !=null) {
+           //This is the element we re looking fo
            if(current.lCount + 1 == k) {
                System.out.println(current.val);
                return;
            }
+           //Implies that our element lies in the left subtree - we can recur for left
            if(current.lCount + 1 > k) {
                current = current.left;
            }
+           //Element lies in the right subtree but we need to change k as we have lcount+1 elements already available in the root + root.left
+           //Subtract them while searching for kth smallest in right subtree
            else {
                k = k - current.lCount - 1;
                current = current.right;

@@ -8,7 +8,7 @@ public class PrintNodesAtKDistanceFromLeaves {
     public static void main(String[] args) {
 
     }
-
+//visited is to not print the same element twice
     public static void print(Node head, int k, List<Integer> path, List<Boolean> visited) {
 
         if(head == null) return;
