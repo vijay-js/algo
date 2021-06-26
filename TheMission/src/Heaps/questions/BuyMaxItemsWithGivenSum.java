@@ -12,9 +12,14 @@ public class BuyMaxItemsWithGivenSum {
 
         int items = 0;
 
-        while(!pq.isEmpty() && sum > 0) {
-            items++;
-            sum = sum - pq.poll();
+        for(int i=0;i<a.length;i++) {
+            if(pq.peek() <= sum) {
+                sum = sum - pq.poll();
+                items++;
+            }
+            else {
+                break;
+            }
         }
         return items;
     }

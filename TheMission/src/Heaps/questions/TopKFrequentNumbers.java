@@ -4,7 +4,7 @@ import java.util.*;
 
 public class TopKFrequentNumbers {
 
-    static class Pair implements Comparable{
+    static class Pair implements Comparable<Pair>{
         int val;
         int freq;
 
@@ -13,11 +13,9 @@ public class TopKFrequentNumbers {
             this.freq = freq;
         }
 
-
         @Override
-        public int compareTo(Object o) {
-            Pair p = (Pair) o;
-            return this.freq - p.freq;
+        public int compareTo(Pair o) {
+            return this.freq - o.freq;
         }
     }
     public static void main(String args[]) {

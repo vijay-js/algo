@@ -5,7 +5,8 @@ import java.util.PriorityQueue;
 
 public class LearnPriorityQueue {
     public static void main(String args[]) {
-        //
+        //Initial Capacity doesn't mean upper bound. We can add more elements
+        //It doesn't auto delete
         PriorityQueue<Integer> pq = new PriorityQueue<>(2);
 
         //MAX HEAP
